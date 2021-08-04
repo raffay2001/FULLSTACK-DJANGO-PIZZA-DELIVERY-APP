@@ -1,0 +1,106 @@
+{% extends 'base.htm' %}
+
+{% block content %}
+
+    <!-- GET STARTED SECTION  -->
+    <section id="contact" class="get-started mt-3">
+        <div class="container">
+            <div class="row text-center">
+                <h1 class="display-3 fw-bold text-capitalize">get started</h1>
+                <div class="heading-line"></div>
+                <h4 class="lh-lg text-capitalize mb-3">
+                    So what are you waiting for ? Just fill the form and enter in the exotic world of pizzas !
+                </h4>
+            </div>
+
+            <!-- STARTING CTA CONTENT  -->
+            <div class="row cta">
+                <div class="col-12 col-lg-6 gradient shadow p-3">
+                    <div class="cta-info w-100">
+                        <h4 class="display-4 fw-bold">100% Satisfaction Guaranteed</h4>
+                        <p class="lh-lg">It is our habbit to satisfy our customers even when the order is over, we will be
+                            get in touch with the customer if he/she is not satisfied with the order. And if the
+                            customer is not satisfied with the services he/she will be refunded.</p>
+                        <h3 class="display-3-brief">What will be the next step?</h3>
+                        <ul class="cta-info-list">
+                            <li class="li-items">We'll prepare the order again.</li>
+                            <li class="li-items">We'll discuss it together.</li>
+                            <li class="li-items">let's start the discussion.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-12 col-lg-6 bg-white shadow p-3">
+                    <div class="form w-100 pb-2">
+                        <!-- <h4 class="display-3--title mb-5">start your project</h4> -->
+                        <form action="/signup" method="post" class="row">
+
+                            {% csrf_token %}
+
+                            <!-- ALERT FOR ERRORS  -->
+                            {% if error %}
+                            <div class="alert alert-danger mb-5" role="alert">
+                                {{error}}
+                              </div>
+                            {% endif %}
+
+                            <!-- FIRST NAME  -->
+                            <div class="col-lg-6 col-md-6 mb-5">
+                                <label for="inputFirstName" class="text-dark">
+                                    <h5>First Name</h5>
+                                </label>
+                                <input value="{{values.first_name}}"  type="text" placeholder="First Name" id="inputFirstName"
+                                    class="shadow form-control form-control-lg" name="firstname">
+                            </div>
+
+                            <!-- LAST NAME  -->
+                            <div class="col-lg-6 col-md-6 mb-5">
+                                <label for="inputLastName" class="text-dark">
+                                    <h5>Last Name</h5>
+                                </label>
+                                <input value="{{values.last_name}}"  type="text" placeholder="Last Name" id="inputLastName"
+                                    class="shadow form-control form-control-lg" name="lastname">
+                            </div>
+
+
+                            <!-- PHONE NUMBER  -->
+                            <div class="col-lg-12 mb-5">
+                                <label for="inputphone" class="text-dark">
+                                    <h5>Phone No.</h5>
+                                </label>
+                                <input value="{{values.phone}}"  type="text" placeholder="Phone no." id="inputphone"
+                                    class="shadow form-control form-control-lg" name="phone">
+                            </div>
+
+                            <!-- EMAIL  -->
+                            <div class="col-lg-12 mb-5">
+                                <label for="inputEmail" class="text-dark">
+                                    <h5>E-Mail</h5>
+                                </label>
+                                <input required value="{{values.email}}" type="email" placeholder="Email Address" id="inputEmail"
+                                    class="shadow form-control form-control-lg" name="email">
+                            </div>
+
+                            <!-- PASSWORD  -->
+                            <div class="col-lg-12 mb-5">
+                                <label for="inputpass" class="text-dark">
+                                    <h5>Password</h5>
+                                </label>
+                                <input  type="password" placeholder="Password" id="inputpass"
+                                    class="shadow form-control form-control-lg" name="password">
+                            </div>
+
+                            <!-- SUBMIT BUTTON  -->
+                            <div class="text-center d-grid mt-1">
+                                <input type="submit" value="Submit" class="btn-primary rounded-pill pt-3 pb-3 submit"
+                                    style="background-color: #ED8F03; border: none; color: rgb(49, 49, 49)">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+{% endblock %}

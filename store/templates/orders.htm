@@ -1,0 +1,55 @@
+{% extends 'base.htm' %}
+
+{% block content %}
+
+{% load cart %}
+{% load custom_filters %}
+
+<div class="container rounded mt-5" style="background: linear-gradient(
+    to right,
+    #ffb75e,
+    #ED8F03
+  ); margin-top: 5rem !important;">
+    <h1 class="display-5 text-center pt-2 mt-2 pb-3">Your Orders</h1>
+    <div class="table-responsive rounded pb-2">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">S.No</th>
+                    <th scope="col">Product</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">Quantity</th>
+                    <th scope="col">Total</th>
+                    <th scope="col">Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for order in orders %}
+                <tr>
+                    <td>{{forloop.counter}}</td>
+                    <td>{{order.product.name}}</td>
+                    <td>{{order.price}}</td>
+                    <td>{{order.quantity}}</td>
+                    <td>{{order.quantity|multiply:order.price}}</td>
+                    {% if order.status %}
+                    <td><small class="badge badge-success">Completed</small></td>
+                    {% else %}
+                    <td><small class="badge badge-danger">Pending</small></td>
+                    {% endif %}
+
+                </tr>
+                {% endfor %}
+
+
+
+
+            </tbody>
+        </table>
+
+
+    </div>
+</div>
+
+{% endblock %}
+
+

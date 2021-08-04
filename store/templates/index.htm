@@ -1,0 +1,479 @@
+{% extends 'base.htm'%}
+
+<!-- CARDS  -->
+{% block content %}
+
+{% load cart %}
+<!-- THE INTRO (HERO) SECTION  -->
+<section id="home" class="intro-section">
+    <div class="container">
+        <div class="row align-items-center text-white">
+            <!-- TEXT CONTENT   -->
+            <div class="col-md-6 intros mb-3">
+                <h1 class="display-2">
+                    <span class="display-2--intro">
+                        Hey, We're THE PIZZAMENT.
+                    </span>
+                    <span class="display-2--description lh-base">
+                        We are serving pizzas since 2000.
+                        We deliver you the pizza that you've never eaten before.
+                    </span>
+                </h1>
+                <a href="/signup">
+                    <button type="button" class="rounded-pill btn-rounded">Get Started
+                        <span><i class="fas fa-arrow-right"></i></span>
+                    </button>
+                </a>
+            </div>
+            <!-- PIZZA PICTURE -->
+            <div class="col-md-6 intros text-end">
+                <div class="img-box">
+                    <img src="https://i.ibb.co/wW1KsXq/pizza8-removebg-preview.png" alt="pizza" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- WAVES SVG  -->
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path fill="#fff" fill-opacity="1"
+            d="M0,128L48,149.3C96,171,192,213,288,192C384,171,480,85,576,85.3C672,85,768,171,864,176C960,181,1056,107,1152,96C1248,85,1344,139,1392,165.3L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
+        </path>
+    </svg>
+</section>
+
+
+<!-- SERVICES SECTION  -->
+<section id="services" class="services">
+    <!-- INTRO OF SERVICES  -->
+    <div class="container">
+        <div class="row text-center">
+            <h1 class="display-3 fw-bold">Our Services</h1>
+            <div class="heading-line mb-1"></div>
+        </div>
+
+
+        <div class="row pt-2 pb-2 mt-0 mb-5">
+            <div class="col-md-6 border-right">
+                <div class="bg-white p-3">
+                    <h2 class="fw-bold text-capitalize text-center">
+                        We provide you all the services necessary to let you experience the best pizzas
+                    </h2>
+                </div>
+            </div>
+            <div class="col-md-6 para">
+                <div class="bg-white p4 container">
+                    <p class="fw-light" style="font-size: 1.2rem;">
+                        Along with the glutamate, during the pizza cooking process, the maillard reaction we perform,
+                        brings forward the flavor compounds that give our pizza its distinct flavor. During the cooking
+                        process, the sugars and amino acids in the dough and pizza toppings converge to create the
+                        flavor compounds and that makes our THE PIZZAMENT a unique place to go to!
+
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SERVICES  -->
+    <div class="container">
+        <!-- DELIVERY  -->
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 services mt-4">
+                <div class="services-content">
+                    <div class="icon d-block fas fa-biking"></div>
+                    <h3 class="display-3--title mt-1">
+                        Fastest Delivery
+                    </h3>
+                    <p class="lh-lg">
+                        We have the fastest Delivery Network for our dearest customers. Our Network Includes 2000 of the
+                        Bike Riders who deliver you the pizza regardless of your Geo-Location. And most Importantly, We
+                        charge zero delivery charges.
+                    </p>
+                    <button type="button" class="rounded-pill btn-rounded learn-more-btn">Learn more
+                        <span><i class="fas fa-arrow-right"></i></span>
+                    </button>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 services mt-4 text-end services-pic-head">
+                <div class="services-pic">
+                    <img src="https://i.ibb.co/VJm6rHq/38087478.jpg" alt="rider" class="img-fluid rounded-circle">
+                </div>
+            </div>
+        </div>
+
+        <!-- FRESH ITEMS -->
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 services mt-4 text-start">
+                <div class="services-pic">
+                    <img src="https://i.ibb.co/b75Jx8k/13468291.jpg" alt="pizza" class="img-fluid rounded">
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 services mt-4">
+                <div class="services-content">
+                    <div class="icon d-block fas fa-pizza-slice"></div>
+                    <h3 class="display-3--title mt-1">
+                        Fresh Ingredients
+                    </h3>
+                    <p class="lh-lg">
+                        We make our pizzas with ingredients that are no more older than one day. Our Ingredients are
+                        pure, organic and fresh in order to let you experience pizzas on a whole new level and obviously
+                        your health is our greatest priority.
+                    </p>
+                    <button type="button" class="rounded-pill btn-rounded learn-more-btn">Learn more
+                        <span><i class="fas fa-arrow-right"></i></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- NO GST -->
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 services mt-4">
+                <div class="services-content">
+                    <div class="icon d-block fas fa-coins"></div>
+                    <h3 class="display-3--title mt-1">
+                        No GST
+                    </h3>
+                    <p class="lh-lg">
+                        Another speciality of us is that we charge no additional taxes like GST and all the other ones
+                        and also on each pizza you buy, you are donating 10 rupees to the charity. So, <strong>HEALTHY
+                            EATING WITH GENEROSITY</strong>.
+                    </p>
+                    <button type="button" class="rounded-pill btn-rounded learn-more-btn">Learn more
+                        <span><i class="fas fa-arrow-right"></i></span>
+                    </button>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 services mt-4 text-end coins-head">
+                <div class="services-pic">
+                    <img src="https://i.ibb.co/LNr7WhR/6616322.jpg" alt="coins" class="img-fluid rounded">
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<!-- PIZZAS SECTION  -->
+<div class="container-fluid pizzas">
+
+    <div class="row text-center mb-5">
+        <h1 class="display-3 fw-bold">Pizzas</h1>
+    </div>
+    <div class="row mx-auto">
+        {% for product in products%}
+        <div id="{{product.id}}" class="card mx-auto mb-3 border border-warning rounded pizza" style="width: 18rem;">
+            <img src="{{product.image.url}}" class="card-img-top" alt="pizza">
+            <div class="card-body">
+                <h5 class="card-title">{{product.name}}</h5>
+                <p class="card-text"><b>{{product.price}} Rs.</b></p>
+                <!-- {% if request.session.cart %}
+                    {{ product | is_in_cart:request.session.cart }}
+                    {% endif %} -->
+
+            </div>
+            <div class="card-footer border-top-0">
+                {% if product|is_in_cart:request.session.cart %}
+                <div class="row p-1">
+                    <form action="/#{{product.id}}" method="POST" class="col-2 p-0">
+                        {% csrf_token %}
+                        <input type="text" hidden value="{{product.id}}" name="product">
+                        <input type="text" hidden value="True" name="remove">
+                        <input type="submit" value=" - " class="btn btn-warning text-dark rounded-pill">
+                    </form>
+
+                    <div class="text-center col pt-1">
+                        <p><strong>{{product|cart_quantity:request.session.cart}}</strong> in Cart</p>
+                    </div>
+
+                    <form action="/#{{product.id}}" method="POST" class="col-2">
+                        {% csrf_token %}
+                        <input type="text" hidden value="{{product.id}}" name="product">
+                        <input type="submit" value="+" class="btn btn-warning text-dark rounded-pill">
+                    </form>
+                </div>
+
+                {% else %}
+                <form action="/#{{product.id}}" method="POST" class="btn-block p-1">
+                    {% csrf_token %}
+                    <input type="text" hidden value="{{product.id}}" name="product">
+                    <input href="#" type="submit" class="form-control btn btn-warning text-dark rounded-pill"
+                        value="Add to Cart">
+                </form>
+
+                {% endif %}
+            </div>
+        </div>
+
+        {% endfor %}
+
+    </div>
+
+</div>
+
+<!-- TESTIMONIALS SECTION  -->
+<section id="testimonials" class="testimonials">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path fill="#fff" fill-opacity="1"
+            d="M0,96L40,128C80,160,160,224,240,218.7C320,213,400,139,480,122.7C560,107,640,149,720,144C800,139,880,85,960,69.3C1040,53,1120,75,1200,106.7C1280,139,1360,181,1400,202.7L1440,224L1440,0L1400,0C1360,0,1280,0,1200,0C1120,0,1040,0,960,0C880,0,800,0,720,0C640,0,560,0,480,0C400,0,320,0,240,0C160,0,80,0,40,0L0,0Z">
+        </path>
+    </svg>
+    <div class="container">
+        <div class="row text-center text-white">
+            <h1 class="display-3 fw-bold">Testimonials</h1>
+            <hr style="width: 100px; height: 3px;" class="mx-auto">
+            <p class="lead pt-1">What our Customers are Saying</p>
+        </div>
+    </div>
+
+    <!-- STARTING THE CAROUSEL CONTENT-->
+    <div class="row align-items-center">
+        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <!-- CAROUSEL ITEM 1  -->
+                <div class="carousel-item active">
+                    <!-- CARD  -->
+                    <div class="container">
+                        <div class="testimonials-card text-center">
+                            <p class="lh-lg">
+                                <i class="fas fa-quote-left"></i>
+                                Never had a pizza, this fresh. The crust was so so soft, hoping to order soon.
+                                <i class="fas fa-quote-right"></i>
+                            <div class="ratings p-1">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            </p>
+                        </div>
+                    </div>
+                    <!-- CLIENT NAME AND ROLE  -->
+                    <div class="testimonials-name text-white">
+                        <h3>Abdul Raffay</h3>
+                    </div>
+                </div>
+
+
+                <!-- CAROUSEL ITEM 2  -->
+                <div class="carousel-item">
+                    <!-- CARD  -->
+                    <div class="container">
+                        <div class="testimonials-card text-center">
+                            <p class="lh-lg">
+                                <i class="fas fa-quote-left"></i>
+                                I really like the pepperoni and hawaiian pizza, they tasted so delicious.
+                                <i class="fas fa-quote-right"></i>
+                            <div class="ratings p-1">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            </p>
+                        </div>
+                    </div>
+                    <!-- CLIENT NAME AND ROLE  -->
+                    <div class="testimonials-name text-white">
+                        <h3>Mudassir Aalam</h3>
+                    </div>
+                </div>
+
+                <!-- CAROUSEL ITEM 3  -->
+                <div class="carousel-item">
+                    <!-- CARD  -->
+                    <div class="container">
+                        <div class="testimonials-card text-center">
+                            <p class="lh-lg">
+                                <i class="fas fa-quote-left"></i>
+                                Never had so tasty pizzas in such a reasonable price, i wish to order daily!!!
+                                <i class="fas fa-quote-right"></i>
+                            <div class="ratings p-1">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            </p>
+                        </div>
+                    </div>
+                    <!-- CLIENT NAME AND ROLE  -->
+                    <div class="testimonials-name text-white">
+                        <h3>Hafsa Azhar</h3>
+                    </div>
+                </div>
+
+
+
+            </div>
+            <div class="text-center">
+                <button class="btn btn-outline-light fas fa-long-arrow-alt-left" type="button"
+                    data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                </button>
+                <button class="btn btn-outline-light fas fa-long-arrow-alt-right" type="button"
+                    data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path fill="#fff" fill-opacity="1"
+            d="M0,96L40,128C80,160,160,224,240,218.7C320,213,400,139,480,122.7C560,107,640,149,720,144C800,139,880,85,960,69.3C1040,53,1120,75,1200,106.7C1280,139,1360,181,1400,202.7L1440,224L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z">
+        </path>
+    </svg>
+</section>
+
+<!-- FOOTER SECTION  -->
+<footer class="footer">
+    <!-- NUMBER, EMAIL AND LOCATION  -->
+    <div class="container">
+        <div class="row">
+            <!-- CONTACT FOR THE MOBILE  -->
+            <div class="col-md-4 col-lg-4 contact-box pt-1 d-md-block d-lg-flex d-flex">
+                <div class="contact-icon"><svg xmlns="http://www.w3.org/2000/svg"
+                        class="icon icon-tabler icon-tabler-phone-call" viewBox="0 0 24 24" stroke-width="1" fill="none"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path
+                            d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2" />
+                        <path d="M15 7a2 2 0 0 1 2 2" />
+                        <path d="M15 3a6 6 0 0 1 6 6" />
+                    </svg></div>
+                <div class="contact-info">
+                    <a href="https://www.facebook.com" target="_blank" class="contact-title">+1 728365413</a>
+                    <p class="contact-sub-title">Mon-Fri 9am-6pm</p>
+                </div>
+            </div>
+
+            <!-- CONTACT FOR THE EMAIL  -->
+            <div class="col-md-4 col-lg-4 contact-box pt-1 d-md-block d-lg-flex d-flex">
+                <div class="contact-icon"><svg xmlns="http://www.w3.org/2000/svg"
+                        class="icon icon-tabler icon-tabler-mail-opened" viewBox="0 0 24 24" stroke-width="1"
+                        fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <polyline points="3 9 12 15 21 9 12 3 3 9" />
+                        <path d="M21 9v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10" />
+                        <line x1="3" y1="19" x2="9" y2="13" />
+                        <line x1="15" y1="13" x2="21" y2="19" />
+                    </svg></div>
+                <div class="contact-info">
+                    <a href="https://www.gmail.com" target="_blank" class="contact-title">info@company.com</a>
+                    <p class="contact-sub-title"> Online support</p>
+                </div>
+            </div>
+
+            <!-- CONTACT FOR LOCATION  -->
+            <div class="col-md-4 col-lg-4 contact-box pt-1 d-md-block d-lg-flex d-flex">
+                <div class="contact-icon"><svg xmlns="http://www.w3.org/2000/svg"
+                        class="icon icon-tabler icon-tabler-map-2" viewBox="0 0 24 24" stroke-width="1" fill="none"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <line x1="18" y1="6" x2="18" y2="6.01" />
+                        <path d="M18 13l-3.5 -5a4 4 0 1 1 7 0l-3.5 5" />
+                        <polyline points="10.5 4.75 9 4 3 7 3 20 9 17 15 20 21 17 21 15" />
+                        <line x1="9" y1="4" x2="9" y2="17" />
+                        <line x1="15" y1="15" x2="15" y2="20" />
+                    </svg></div>
+                <div class="contact-info">
+                    <a href="https://goo.gl/maps/S7pL7KUSsJa5AyEc6" class="contact-title" target="_blank">Karachi,
+                        Pakistan</a>
+                    <p class="contact-sub-title">KHI 10012, PAK</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SOCIAL MEDIA LINKS  -->
+    <div class="footer-social-media mt-5 mb-5" style="background-color: #fff;">
+        <div class="container">
+            <div class="row py-4 text-center text-dark">
+                <div class="col-lg-5 col-md-6 mb-4 mb-md-0 text-capitalize">
+                    <p class="h5">connect with us on social media</p>
+                </div>
+
+                <div class="col-lg-7 col-md-6">
+                    <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.github.com" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- COMPANY NAME AND OTHER LINKS  -->
+    <div class="container mt-5">
+        <div class="row text-white justify-content-center mt-3 pb-3 comp-name">
+
+            <div class="col-12 col-sm-6 col-lg-6 mx-auto">
+                <h5 class="text-capitalize fw-bold text-dark">THE PIZZAMENT</h5>
+                <hr class="bg-white d-inline-block mb-0" style="width: 60px; height: 2px;">
+                <p class="lh-lg fw-light text-dark mt-0">We are serving pizzas since 2000.<br> We provide you with
+                    the best pizzas that are available in the market.</p>
+            </div>
+
+            <div class="col-12 col-sm-6 col-lg-2 mb-4 comp-name mx-auto">
+                <h5 class="text-capitalize fw-bold text-dark">Products</h5>
+                <hr class="bg-white d-inline-block mb-4" style="width: 60px; height: 2px;">
+                <ul class="list-inline">
+                    <li><a href="#" target="_blank">Pizzas</a></li>
+                    <li><a href="#" target="_blank">Garlic Breads</a></li>
+                    <li><a href="#" target="_blank">Tons of Sauces</a></li>
+                    <li><a href="#" target="_blank">Chinese Food</a></li>
+                </ul>
+            </div>
+
+            <div class="col-12 col-sm-6 col-lg-2 mb-4 comp-name mx-auto">
+                <h5 class="text-capitalize fw-bold text-dark">Useful Links</h5>
+                <hr class="bg-white d-inline-block mb-4" style="width: 60px; height: 2px;">
+                <ul class="list-inline">
+                    <li><a href="#" target="=_blank">Your Account</a></li>
+                    <li><a href="#" target="=_blank">Become an Affiliate</a></li>
+                    <li><a href="#" target="=_blank">Create an Account</a></li>
+                    <li><a href="#" target="=_blank">Help</a></li>
+                </ul>
+            </div>
+
+            <div class="col-12 col-sm-6 col-lg-2 mb-4 comp-name mx-auto">
+                <h5 class="text-capitalize fw-bold text-dark">Contact</h5>
+                <hr class="bg-white d-inline-block mb-4" style="width: 60px; height: 2px;">
+                <ul class="list-inline">
+                    <li><a href="https://www.facebook.com" target="=_blank">Facebook</a></li>
+                    <li><a href="https://www.instagram.com" target="=_blank">Instagram</a></li>
+                    <li><a href="https://www.linkedin.com" target="=_blank">LinkedIn</a></li>
+                    <li><a href="https://www.slack.com" target="=_blank">Slack</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- COPYRIGHT PORTION OF FOOTER  -->
+    <div class="footer-bottom pt-5 pb-5">
+        <div class="container">
+            <div class="row text-center text-white">
+                <div class="col-12">
+                    <div class="footer-copyright">
+                        <p><span class="copy">&COPY; Copyright 2021</span> <span><a href="#" target="_blank">THE
+                                    PIZZAMENT
+                                </a></span> <span class="copy">| Created by</span> <span> <a href="https://www.linkedin.com/in/abdul-raffay-b6832320b/"
+                                    target="_blank">Raffay</a></span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- BACK TO TOP BUTTON  -->
+<a href="#" class="shadow btn rounded-circle back-to-top">
+    <i class="fas fa-chevron-up"></i>
+</a>
+
+
+
+{% endblock %}
